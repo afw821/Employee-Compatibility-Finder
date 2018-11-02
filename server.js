@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'app/public')));
 // -----------------
 
 require('./app/routing/apiRoutes')(app);
-require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/htmlRoutes')(app);
 
 // Starts our server on the predefined PORT
 app.listen(PORT, function(){
