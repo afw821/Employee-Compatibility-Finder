@@ -5,14 +5,14 @@ const path = require('path');
 
 const app = express();
 
-const PORT =  3000;
+const PORT = process.env.PORT || 8080;
 
 // Sets up our server to parse our request body for usage
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Sets our server to use the public directory for static assets
-app.use(express.static(path.join(__dirname, './app/public')));
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 // Routes
 // -----------------
