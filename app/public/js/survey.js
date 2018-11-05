@@ -63,7 +63,8 @@ $(function () {
     <div class="modal-footer">
         <button class="btn btn-default" data-dismiss="modal">Close</button>
     </div>`);
-        $(".modal").modal("show");
+        $("#results-modal").modal("show");
+        
       });
 
     } else {
@@ -76,6 +77,7 @@ $(function () {
   }
 
   $('#submit').on('click', submit)
+  
 
 })
 
