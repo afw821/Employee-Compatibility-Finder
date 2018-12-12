@@ -64,7 +64,7 @@ $(function () {
         <button class="btn btn-default" data-dismiss="modal">Close</button>
     </div>`);
         $("#results-modal").modal("show");
-        
+
       });
 
     } else {
@@ -77,7 +77,7 @@ $(function () {
   }
 
   $('#submit').on('click', submit)
-  
+
 
 })
 

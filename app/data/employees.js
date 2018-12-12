@@ -14,8 +14,8 @@ module.exports = [{
         1
       ]
   },{
-    "name":"Billy-bob",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Dr. Evil",
+    "photo":"http://www.bobharris.com/wp-content/uploads/2012/09/Screen-Shot-2012-09-06-at-2.41.54-PM.png",
     "scores":[
         4,
         1,
