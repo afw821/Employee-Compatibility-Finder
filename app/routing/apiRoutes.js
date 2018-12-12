@@ -5,10 +5,12 @@ let employees = require('../data/employees.js');
 
 
 module.exports = function (app) {
+  //API GET route for all employees
   app.get('/api/employees', function (req, res) {
+    //Return employees in JSON format
     return res.json(employees);
   });
-
+//API POST Route 
   app.post('/api/employees', function (req, res) {
     let bestMatch = {
       name: "",
@@ -26,9 +28,6 @@ module.exports = function (app) {
         const currentUserScore = userScore[j];
         totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentEmployeeScore));
       }
-      console.log(currentEmployee)
-      console.log(totalDifference)
-      console.log(bestMatch)
       if (totalDifference <= bestMatch.scoreDifference) {
         bestMatch.name = currentEmployee.name;
         bestMatch.photo = currentEmployee.photo;

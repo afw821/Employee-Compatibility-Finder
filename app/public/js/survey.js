@@ -22,14 +22,14 @@ $(function () {
   }
 
 
-
+//The submit survey function
   const submit = function (e) {
     e.preventDefault();
 
-
+    //Conditional for validate form function
     if (validateForm()) {
 
-
+      //User data set to a constant. Capturing the values of the input scores
       const userData = {
         name: $('#name').val().trim(),
         photo: $('#photo').val().trim(),
@@ -46,10 +46,8 @@ $(function () {
           $('#qTen').val()
         ]
       };
-
-      console.log(userData);
+      //Ajax POST route to append user to the results modal
       $.post('/api/employees', userData).done(function (data) {
-        console.log(data);
         $('.modal-content').empty();
         $(".modal-content").append(`
         <div class="modal-header">
@@ -69,7 +67,7 @@ $(function () {
 
     } else {
 
-
+      //Conditional for an error
       $('#error')
         .text('Please complete everything before submitting!')
         .addClass('alert alert-danger');

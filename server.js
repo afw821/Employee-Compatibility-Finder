@@ -1,11 +1,11 @@
-
+//Dependencies
 const express = require('express');
 
 const path = require('path');
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8086;
 
 // Sets up our server to parse our request body for usage
 app.use(express.urlencoded({ extended: true }));
